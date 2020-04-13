@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="Arrow_right_unselected" data-name="Arrow right unselected" transform="translate(-1122 -2071)">
+    <g id="BG" transform="translate(1122 2071)" fill="none" stroke="#d8dce9" stroke-width="1">
+      <circle cx="24" cy="24" r="24" stroke="none"/>
+      <circle cx="24" cy="24" r="23.5" fill="none"/>
+    </g>
+    <g id="Icon" transform="translate(1131 2111) rotate(-90)">
+      <path id="Path_77" data-name="Path 77" d="M7.88,8.59,14,14.7,20.12,8.59,22,10.47l-8,8-8-8Z" transform="translate(2 2.863)" fill="#9eacc7"/>
+      <path id="Path_78" data-name="Path 78" d="M0,0H32V32H0Z" fill="none"/>
+    </g>
+  </g>
+</svg>

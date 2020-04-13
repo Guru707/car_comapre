@@ -1,0 +1,10 @@
+<svg id="Arrow_left" data-name="Arrow left" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="BG" fill="none" stroke="#d8dce9" stroke-width="1">
+    <circle cx="24" cy="24" r="24" stroke="none"/>
+    <circle cx="24" cy="24" r="23.5" fill="none"/>
+  </g>
+  <g id="Icon" transform="translate(7 40) rotate(-90)">
+    <path id="Path_77" data-name="Path 77" d="M1.88,9.88,8,3.773,14.12,9.88,16,8,8,0,0,8Z" transform="translate(8 10.667)" fill="#9eacc7"/>
+    <path id="Path_78" data-name="Path 78" d="M0,32H32V0H0Z" fill="none"/>
+  </g>
+</svg>
