@@ -69,6 +69,7 @@ h5{
 @media(min-width:767px){
 	.btn-head .btn {
 		padding:8px 30px;
+		font-size:12px !important;
 	}
 }
 .navbar-nav > li > a{
@@ -372,16 +373,28 @@ section.footer-sec.container {
     border-color:#ded9d9;
 	
 }
+
 .banner.next-vehicle{
-	/* background-size: 100% 105% !important; */
-    margin-bottom: 0px;
-    background: url(/static/media/Photo@2x.f974f469.png) no-repeat right;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-	background-size:cover;
+
+	margin-bottom: 0px;
+
+    background-image: url(../images/car-footer.png);
+	background-position:right;
+	background-repeat: no-repeat; 
+	background-size: 22%;
+	position: relative;
+	
+}
+.banner.next-vehicle:before{
+	content:"";
+	position:absolute;
+	width:100%;
+	height: 100%;
+	z-index: -2;
+	background: #f4f4f7; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #f4f4f7 0%, #fafafa 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f4f4f7 0%,#fafafa 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f4f4f7 0%,#fafafa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ /* IE6-9 fallback on horizontal gradient */
 }
 @media screen and (max-width:1190px){
 	/* .buttons {
@@ -602,7 +615,7 @@ section.footer-sec.container {
 }
 .carousel-arrow{
 	position: relative;
-    width: 80px;
+    width: 125px;
     display: inline-block;
     height: 50px;
 	margin-left: 15px;
@@ -619,10 +632,10 @@ i.fa.fa-chevron-left:hover, i.fa.fa-chevron-right:hover {
 	border: 1px solid #9842a8;
 	background:#9842a8;
 	color:#fff;
-}
+} 
 section.container.slider-bar {
     margin: 40px auto 70px;
-}
+} 
 .hidden { display:none; }
 .nonHidden { display:block; color: red; }
 .succHidden { display:block; color: green; }
