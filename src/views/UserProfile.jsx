@@ -476,6 +476,7 @@ class UserProfile extends Component {
 				<section className="container list-col-table"  ref={this.myDivToFocus}>
 					<div className="row">
 						<div className="col-sm-12">
+						<div class="table-responsive">
 							<table className="table">
 								{this.state.showResult ? (<tbody>
 									<tr>
@@ -593,6 +594,7 @@ class UserProfile extends Component {
 									</tr>
 								</tbody>)}
 							</table>
+							</div>
 						</div>
 					</div>
 				</section>
