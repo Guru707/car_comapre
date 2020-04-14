@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v1.3.0
+* Car Compare Australia
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
@@ -15,6 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+
 import React from "react";
 import ReactDOM from "react-dom";
 

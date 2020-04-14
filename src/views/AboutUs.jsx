@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v1.3.0
+* Car Compare Australia
 =========================================================
 
 * Product Page: https://www.creative-tim.com/productli /ght-bootstrap-dashboard-react
@@ -16,7 +16,7 @@
 
 */
 import React, { Component } from "react";
-import logo from "assets/images/Girl-with-new-car.jpeg";
+import logo from "assets/images/AdobeStock_254446507_Preview.jpg";
 import img1 from "assets/images/Photo 1.jpg";
 import img2 from "assets/images/Photo 2.jpg";
 import img3 from "assets/images/Photo 3.jpg";
@@ -69,7 +69,7 @@ class UserProfile extends Component {
 					<div className="col-xs-12 col-sm-10 col-sm-offset-1">
 						<div className="row">
 							<div className="col-sm-7">
-								<h5 className="title">Who are we?</h5>
+								<p><h5 className="title">Who are we?</h5></p>
 								<p className="txt">Our aim is to make purchasing a vehicle easy. To have all your research in one place.</p>
 								<p className="txt">We are an independent company that simply allows you to compare vehicle features.</p>
 								<p className="txt">Our team are experienced within the automative industry, so we understand the overhelming experience it can be when trying to decide on your next vehicle. Everybody has different wants and needs - so we have made it easy by breaking down all the important information and being able to compare numerous vehicles.</p>
@@ -127,8 +127,8 @@ class UserProfile extends Component {
                         </div>                        
                     </div>
                     <div class="carousel-arrow">
-                    <a data-slide = "prev" onClick={this.goLeft} className= "left carousel-control"><img style={{"width":"35px"}} src={arrowLeft} onMouseOut={e => (e.currentTarget.src = arrowLeft)} onMouseOver={e => (e.currentTarget.src = arrowLeftHovered)}></img> </a>
                     <a data-slide = "next" onClick={this.goRight} className= "right carousel-control"><img style={{"width":"35px"}} src={arrowRight} onMouseOut={e => (e.currentTarget.src = arrowRight)} onMouseOver={e => (e.currentTarget.src = arrowRightHovered)}></img></a>
+                    <a data-slide = "prev" onClick={this.goLeft} className= "left carousel-control"><img style={{"width":"35px"}} src={arrowLeft} onMouseOut={e => (e.currentTarget.src = arrowLeft)} onMouseOver={e => (e.currentTarget.src = arrowLeftHovered)}></img> </a>
                     </div>
                     </div>
                     <div class="col-sm-6 col-md-6">

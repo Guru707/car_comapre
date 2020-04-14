@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v1.3.0
+* Car Compare Australia
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
@@ -139,10 +139,11 @@ class Footer extends Component {
 			.then((responseData) => {
 				//console.log(props, this.props, '=============')
 			this.setState({deladerForm: false})
-			this.setState({successForm: true})
+			this.setState({successForm: true});
 			setInterval(() => {
-			props.onHide();
-			  }, 2000);
+				this.setState({successForm: false});
+					// props.onHide();
+					   }, 2000);
 			})
 			.catch(error => console.warn(error));
 		}
@@ -157,7 +158,7 @@ class Footer extends Component {
 
 		return (
 			<>
-      <a style={{"fontSize": "14px"}} onClick={() => setModalShow(true)}>Find Local Dealers</a>
+      <a href="javascript:void()" style={{"fontSize": "14px"}} onClick={() => setModalShow(true)}>Find Local Dealers</a>
 				<this.MyVerticallyCenteredModal
 					show={modalShow}
 					onHide={() => setModalShow(false)}

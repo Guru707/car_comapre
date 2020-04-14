@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v1.3.0
+* Car Compare Australia
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
@@ -43,6 +43,7 @@ var options = [];
 
 
 class UserProfile extends Component {
+	
 	constructor(props) {
 		super(props);
 		window.scrollTo(0, 0);
@@ -58,10 +59,9 @@ class UserProfile extends Component {
 			d1: { value: '', status: false, dbName: "make" }, d2: { value: '', status: false, dbName: "model" }, d3: { value: '', status: false, dbName: "badge" }, d4: { value: '', status: false, dbName: "transmission" }, d5: { value: '', status: false, dbName: "fuelType" }
 		}
 		this.myDivToFocus = React.createRef()
-		console.log(props.location.homeProps)
 		if(props.location.homeProps && props.location.homeProps.name && props.location.homeProps.name === "tool"){
 			//if(this.myDivToFocus.current){
-				window.scrollTo(0, 390);
+				window.scrollTo(0, 400);
 			//}
 		}
 	}
@@ -110,7 +110,7 @@ class UserProfile extends Component {
 						<div className="form-group">
 							<span className={this.state.deladerForm ? 'nonHidden' : 'hidden'}>All fields required</span>
 							<span className={this.state.successForm ? 'succHidden' : 'hidden'}>Thankyou for you query.</span>
-							<button className="btn btn-success" type="button" style={{"width": "30%"}} onClick={() => this.submitContact(props)} >Submit</button>
+							<button className="btn btn-warning" type="button" style={{"width": "30%"}} onClick={() => this.submitContact(props)} >Submit</button>
 						</div>
 
 					</form>
@@ -175,7 +175,8 @@ class UserProfile extends Component {
 			this.setState({deladerForm: false})
 			this.setState({successForm: true})
 			setInterval(() => {
-			props.onHide();
+			//props.onHide();
+			this.setState({successForm: false});
 			  }, 2000);
 			})
 			.catch(error => console.warn(error));

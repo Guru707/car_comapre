@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Light Bootstrap Dashboard React - v1.3.0
+* Car Compare Australia
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard-react
@@ -23,12 +23,15 @@ import logo from "assets/images/CarCompareLogo.jpg";
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import Select from 'react-select';
+import UserProfile from "views/UserProfile";
 var options = [];
 
 class AdminNavbarLinks extends Component {
   constructor(props) {
 		super(props);
+		console.log(window.location.href, '========')
 		this.state = {
+			activeId : 1,
 			deladerForm: false,
       successForm: false
     }
@@ -143,7 +146,8 @@ class AdminNavbarLinks extends Component {
 			this.setState({deladerForm: false})
 			this.setState({successForm: true})
 			setInterval(() => {
-			props.onHide();
+				this.setState({successForm: false});
+			//props.onHide();
 			  }, 2000);
 			})
 			.catch(error => console.warn(error));
@@ -159,7 +163,7 @@ class AdminNavbarLinks extends Component {
 
 		return (
 			<>
-      <span className="btn custom"  style={{ "color": "white" }} onClick={() => setModalShow(true)}>Find your local dealer</span>
+      <span className="btn custom"  style={{ "color": "white", "width":"45%" }} onClick={() => setModalShow(true)}>Find your local dealer</span>
 
 				<this.MyVerticallyCenteredModal
 					show={modalShow}
@@ -167,6 +171,13 @@ class AdminNavbarLinks extends Component {
 				/>
 			</>
 		);
+	}
+	handleClick = (id) => {
+		this.setState({activeId : id});
+		console.log(this.state)
+	}
+	testFunc = () => {
+		window.scrollTo(0, 400);
 	}
   render() {
     return (
@@ -186,16 +197,16 @@ class AdminNavbarLinks extends Component {
 
 					  <ul className="nav navbar-nav topnav">
 						<li><NavLink
-                      exact activeClassName="activeLink" to={"home"} >Home</NavLink></li>
+                      exact className={((this.state.activeId === 1 || window.location.href.split('/')[4] === 'home') ? 'activeLink' : '')} onClick={() => this.handleClick(1)}  to={"home"} >Home</NavLink></li>
 						<li><NavLink
-                      to={"about"} >About us</NavLink></li>
+                      to={"about"} onClick={() => this.handleClick(2)} className={((this.state.activeId === 2 && window.location.href.split('/')[4] === 'about') ? 'activeLink' : '')} >About us</NavLink></li>
 						<li><NavLink
-                      to={"contact"} >Contact Us</NavLink></li>
+                      to={"contact"} onClick={() => this.handleClick(3)} className={((this.state.activeId === 3 && window.location.href.split('/')[4] === 'contact') ? 'activeLink' : '')} >Contact Us</NavLink></li>
 					  </ul>
-					  <div className="buttons btn-head"  >
+					  <div className="buttons btn-head" >
               
-						<span className="btn btn-warning btn-head"    ><NavLink exact 
-										to={{"pathname": "home", "homeProps" :{"name": "tool"}}}   style={{"color":"white", "textDecoration":"none"}}>Car Comparison Tool</NavLink></span>
+						<NavLink exact onClick={() => this.testFunc()} 
+										to={{"pathname": "home", "homeProps" :{"name": "tool"}}}   style={{"color":"white", "textDecoration":"none"}}><span className="btn btn-warning btn-head"    >Car Comparison Tool</span></NavLink>
 						<b><this.App /></b>
 					  </div>
 					</div>
